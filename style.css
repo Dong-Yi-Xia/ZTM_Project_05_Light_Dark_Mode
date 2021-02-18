@@ -1,4 +1,6 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Kaushan+Script&family=Reggae+One&family=Roboto&display=swap');
+
 /* In root pseudo-class, Custom theme color On/Light mode */
 :root {
   --primary-color: rgb(255, 92, 92);
@@ -29,6 +31,7 @@ html {
 
 body {
   margin: 0;
+  font-family: Fira Sans, sans-serif;
   /* set colors using the custom var names */
   color: var(--on-background);
   background-color: var(--background);
@@ -44,11 +47,13 @@ section {
 }
 
 h1 {
+  font-family: Kaushan Script, sans-serif;
   font-size: 100px;
   margin-bottom: 0;
 }
 
 h2 {
+  color: var(--on-background-alt);
   font-size: 32px;
   font-weight: normal;
 }
@@ -58,6 +63,7 @@ nav {
   z-index: 10;  /* Will allows remain on top of other elements, which have z-index of 1 */
   position: fixed; /* Nav will always remain fix on screen, when user scrolls */
   font-size: 24px;
+  font-family: Reggae One, sans-serif;
   letter-spacing: 3px;
   padding: 25px;
   width: 100vw; /* As wide as the window*/
@@ -185,8 +191,8 @@ p {
 .theme-switch-wrapper {
   display: flex;
   align-items: center;
-  z-index: 100;
-  position: fixed;
+  z-index: 100;     /* Always on top */
+  position: fixed;  /* Always fixed in the same position */
   right: 25px;
   top: 30px;
 }
@@ -236,7 +242,7 @@ p {
   width: 26px;
 }
 
-input:checked + .slider {
+input:checked + .slider {   /* when input is checkout slider changed bg color*/
   background: var(--primary-color);
 }
 
